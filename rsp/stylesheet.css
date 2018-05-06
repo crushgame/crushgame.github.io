@@ -1,0 +1,219 @@
+/* GENERAL */
+
+body {
+    font-family: 'Quicksand', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #212B52;
+    text-align: center;
+    color: #efefef;
+    margin-bottom: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-xlg {
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+}
+
+.create-duel-label, .duel-label {
+    margin-bottom: 50px;
+}
+
+.modal {
+    color: #333;
+}
+
+.back-home-row {
+    padding: 5px 0;
+    margin-bottom: 40px;
+    background: rgba(0,0,0,0.25);
+    /* border-bottom: 1px solid rgba(255,255,255,0.1); */
+}
+.back-home-row a {
+    cursor: pointer;
+}
+.back-home-row img {
+    height: 70px;
+}
+
+.logo-main {
+    position: absolute;
+    right: 0;
+    font-size: 11px !important;
+    opacity: 0.3;
+    max-width: 200px;
+}
+
+/* PAGES */
+
+#main {
+    /* margin-top: 60px; */
+    text-align: center;
+}
+
+#jumbo {
+    margin-bottom: 40px;
+}
+
+#vs {
+    text-align: center;
+}
+
+#results {
+    /* margin-top: 80px; */
+    text-align: center;
+}
+
+#canvas {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.table thead tr th {
+    font-weight: bold;
+    border-top: 0;
+    font-size: 22px;
+    padding: 1.4rem 1rem;
+}
+.table tbody tr td {
+    vertical-align: middle;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+#reveal h1 {
+    margin: 60px auto;
+}
+
+/* SPECIFICS */
+
+#create-or-fight {
+    margin: 50px auto;
+}
+#start {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+    
+
+.info {
+    opacity: 0.5;
+}
+
+.step {
+    margin: 12px 0;
+}
+
+.fight-row {
+    margin-top: 50px;
+}
+
+.form-container {
+    max-width: 530px;
+}
+
+.results-container {
+    margin: 60px auto;   
+}
+.results-container h3 {
+    padding: 15px 0;
+}
+
+.container-bg {
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.btn-group-toggle .active {
+    background-color: #A1CDF1 !important;
+}
+
+#content {
+    padding: 30px 15px 20px 15px;
+}
+
+#alert input {
+    width: 100%;
+}
+
+#footer {
+    margin-top: 100px;
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+
+
+/*
+    .select-wallet-file
+    ============================================================
+    */
+
+    /* .select-wallet-file label.file {
+        background-color: #f5f5f5;
+        border-radius: 3px;
+        cursor: pointer;
+        display: block;
+        font-size: 19px;
+        font-weight: bold;
+        line-height: 50px;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+    } */
+
+    #wallet-container-wrapper {
+        
+        /* padding: 10px 40px; */
+        margin-bottom: 30px;
+    }
+    #wallet-container {
+        padding: 20px;
+        border: 1px solid #efefef;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 5px;
+    }
+    #walletinfo {
+        border-top: 1px solid #efefef;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    /* .select-wallet-file .empty {
+        border: 1px solid red;
+    } */
+    
+    .select-wallet-file input[type=file] {
+        display: none;
+    }
+    
+    .select-wallet-file label.pass {
+        display: block;
+    }
+    
+    .select-wallet-file input[type=password] {
+        background-color: #f5f5f5;
+        border: 1px solid #e8e8e8;
+        border-radius: 3px;
+        display: block;
+        height: 3em;
+        letter-spacing: .3em;
+        margin-top: 10px;
+        padding: 0 10px;
+        width: 100%;
+    }
+    
+    .select-wallet-file label.hide {
+        display: none;
+    }
+    
+    .select-wallet-file .comment {
+        font-size: .8rem;
+    }
