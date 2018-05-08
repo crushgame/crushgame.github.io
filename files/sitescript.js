@@ -754,8 +754,7 @@ function getGamesList(verifyGameId) {
                 var gameAddress2 = game["player2_address"];
                 console.log("---- GAME " + gameId + " ----")
                 console.log("gameAddress 1 and 2", gameAddress, gameAddress2);
-                console.log("globalParams address", globalParams.account.getAddressString());
-                if (globalParams.account) {
+                if (globalParams.account !== undefined && globalParams.account !== null && globalParams.account) {
                     var currentAccountAddress = globalParams.account.getAddressString();
                     var challengersHtml = "<span class='badge badge-info'>GAME "+gameId+"</span> " + shortenAddress(gameAddress, currentAccountAddress) + " <span class='badge badge-primary'>vs</span> " + shortenAddress(gameAddress2, currentAccountAddress);
                     var gameState = "";
@@ -819,7 +818,7 @@ function getGamesList(verifyGameId) {
                         $("#rooms .results-container tbody").append($row);
                     } 
                 } else {
-                    console.log("Login first");
+                    showAlert("解锁钱包开始看游戏！Unlock wallet first to see games！");
                 }
             }
             initFightButtons();
@@ -888,10 +887,25 @@ function duel(address) {
     $(".duel-label").show();
 }
 
+function showOrHideWallet() {
+    if (globalParams && globalParams.account) {
+        $("#wallet").hide();
+        walletReady = true;
+        $("#create-or-fight").show();
+        $("#rooms").show();
+        $("#my-games").show();
+    } else {
+        $("#wallet").show();
+        walletReady = false;
+        $("#create-or-fight").hide();
+        $("#rooms").hide();
+        $("#my-games").hide();
+    }
+}
+
 function hideWalletShowGames() {
     goToHomePage();
-    $("#wallet").hide();
-    walletReady = true;
+    showOrHideWallet();
     getGamesList();
 }
 
@@ -1011,6 +1025,7 @@ function goToHomePage() {
     $(".page").hide();
     $("#main").show();
     $(".main-page").show();
+    showOrHideWallet();
 }
 
 function goToBattlePage() {
@@ -1238,7 +1253,7 @@ canvas.height = H;
 Draw();
 
 setInterval(function(){
-    if (walletReady) {
+    if (walletReady == true) {
         getGamesList();
     }
 }, 5000);
